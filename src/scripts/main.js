@@ -12,10 +12,11 @@
 // alert(arr); // HTML, JavaScript, CSS (без змін)
 
 function copySorted(arr) {
-    let copyArr = [...arr];
+    let copyArr = arr.map(item => item.toString());
+    
     console.log(arr)
-    console.log(copyArr)
-    return copyArr.sort((a, b) => a - b);
+    console.log(copyArr.sort((a, b) => a.localeCompare(b)))
+    return copyArr.sort((a, b) => a.localeCompare(b));
 }
 
-copySorted([-5,53,65,-95,94,-1,1,4])
+copySorted([4, 2, -5, 'zz'])
